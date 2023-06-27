@@ -1,1 +1,150 @@
+cretae daatabase
 
+create table Stu(
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  age INT,
+  major VARCHAR(40)
+  );
+  insert INTO Stu(id,name,age,major) VALUES (1,'John',20,'CSE');
+  insert INTO Stu(id,name,age,major) VALUES (2,'Jahe',22,'Maths');
+  insert INTO Stu(id,name,age,major) VALUES (3,'Michael',21,'Biology');
+  insert INTO Stu(id,name,age,major) VALUES (4,'Emily',19,'Physics');
+  select * from Stu
+
+
+ans::
+id	name	age	major
+1	John	20	CSE
+2	Jahe	22	Maths
+3	Michael	21	Biology
+4	Emily	19	Physics
+
+2)
+alter table Stu ADD COLUMN email varchar(50);
+  update Stu set email='johndoe@example.com' where id=1;
+  select * from Stu;
+ update Stu set email='jahe.das@example.com' where id=2;
+  update Stu set email='Michael.Ben@example.com' where id=3;
+  update Stu set email='Emily.Dev@example.com' where id=4;*/
+  
+  
+  select * from Stu;
+
+
+
+
+
+
+
+
+
+create table Employee(
+    id INT PRIMARY KEY,
+    name varchar(50),
+    salary INT);*/
+    --insert into Employee (id,name,salary) values (1,'Sneha',60000);
+   -- select * from Employee
+   /*insert into Employee (id,name,salary) values (2,'Ramya',6000);
+   insert into Employee (id,name,salary) values (3,'Priya',50000);
+   insert into Employee (id,name,salary) values (4,'Atshaya',45000);
+   insert into Employee (id,name,salary) values (5,'Bhuvana',56000);
+   insert into Employee (id,name,salary) values (6,'Vaisha',6000);
+   insert into Employee (id,name,salary) values (7,'Thrish',89000);
+   insert into Employee (id,name,salary) values (8,'Udhaya',6000);
+   insert into Employee (id,name,salary) values (9,'Varsh',56000);
+   insert into Employee (id,name,salary) values (10,'Dhatcha',40000);
+   insert into Employee (id,name,salary) values (11,'Indhu',29000);
+   insert into Employee (id,name,salary) values (12,'Abi',45670);
+   insert into Employee (id,name,salary) values (13,'Vedha',6900);
+   insert into Employee (id,name,salary) values (14,'Kavi',34000);
+   insert into Employee (id,name,salary) values (15,'Dhasha',34567);
+   insert into Employee (id,name,salary) values (16,'Sow',66000);
+   insert into Employee (id,name,salary) values (17,'Nivi',47890);
+   insert into Employee (id,name,salary) values (18,'Deeps',34567);
+   insert into Employee (id,name,salary) values (19,'Gopss',27865);
+   insert into Employee (id,name,salary) values (20,'Srimathi',33678);*/
+  -- select * from Employee
+  --select * from Employee order By name ;
+  --select * from Employee group By salary>45000;
+ -- alter table Employee ADD COLUMN dept varchar(50);
+  --select * from Employee;
+  
+  --update Employee set dept="CSE" where id =1;
+  --select * from Employee;
+  
+  /*update Employee set dept="ECE" where id =2;
+  update Employee set dept="CSE" where id =3;
+  update Employee set dept="CSE" where id =4;
+  update Employee set dept="EEE" where id =5;
+  update Employee set dept="CSE" where id =6;
+  update Employee set dept="CSE" where id =7;
+  update Employee set dept="ECE" where id =8;
+  update Employee set dept="CSE" where id =9;
+  update Employee set dept="IT" where id =10;
+  update Employee set dept="AIDS" where id =11; 
+  update Employee set dept="MECH" where id =12;
+  
+  update Employee set dept="CSE" where id =13;
+  update Employee set dept="CSE" where id =14;
+  update Employee set dept="EEE" where id =15;
+  update Employee set dept="CSE" where id =16;
+  update Employee set dept="CSE" where id =17;
+  update Employee set dept="ECE" where id =18;
+  update Employee set dept="CSE" where id =19;
+  update Employee set dept="IT" where id =20;
+  update Employee set dept="AIDS" where id =11; 
+  update Employee set dept="MECH" where id =12;*/
+  
+  --select * from Employee;
+  --select * from Employee where id>15 and salary>45000;
+ -- select * from Employee;
+ select name,dept,min(salary) as min_salary from Employee group by dept;
+ select dept,name,max(salary) from Employee group by dept;
+ select dept,avg(salary),name from Employee group by dept order by name;
+ select dept,count(id) from Employee group by dept order by dept;
+ select dept,sum(salary) from Employee group by dept;
+   
+name	dept	min(salary)
+Indhu	AIDS	29000
+Vaisha	CSE	6000
+Ramya	ECE	6000
+Dhasha	EEE	34567
+Srimathi	IT	33678
+Abi	MECH	45670
+dept	name	max(salary)
+AIDS	Indhu	29000
+CSE	Thrish	89000
+ECE	Deeps	34567
+EEE	Bhuvana	56000
+IT	Dhatcha	40000
+MECH	Abi	45670
+dept	avg(salary)	name
+MECH	45670	Abi
+EEE	45283.5	Bhuvana
+IT	36839	Dhatcha
+AIDS	29000	Indhu
+ECE	15522.333333333334	Ramya
+CSE	44423.181818181816	Sneha
+dept	count(id)
+AIDS	1
+CSE	11
+ECE	3
+EEE	2
+IT	2
+MECH	1
+dept	sum(salary)
+AIDS	29000
+CSE	488655
+ECE	46567
+EEE	90567
+IT	73678
+MECH	45670
+
+
+ans::
+id	name	age	major	email
+1	John	20	CSE	johndoe@example.com
+2	Jahe	22	Maths	jahe.das@example.com
+3	Michael	21	Biology	Michael.Ben@example.com
+4	Emily	19	Physics	Emily.Dev@example.com
